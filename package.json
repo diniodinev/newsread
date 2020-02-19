@@ -1,7 +1,7 @@
 {
   "name": "angular-essential-training",
-  "version": "1.0.0",
-  "author": "Justin Schwartzenberger",
+  "version": "1.0.1",
+  "author": "Dinyo Dinev",
   "description": "This project is the repository for my Angular Essential Training course on LinkedIn Learning.",
   "repository": {
     "type": "git",
@@ -11,7 +11,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "production": "ng build --prod --base-href=https://diniodinev.github.io/newsread/"
   },
   "private": true,
   "dependencies": {
