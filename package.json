@@ -12,7 +12,7 @@
     "start": "ng serve",
     "build": "ng build",
     "lint": "ng lint",
-    "production": "ng build --prod --base-href=https://diniodinev.github.io/newsread/"
+    "production": "ng build --prod --base-href=/newsread/"
   },
   "private": true,
   "dependencies": {
