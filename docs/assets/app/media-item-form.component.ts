@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-media-item-form',
@@ -7,12 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MediaItemFormComponent implements OnInit {
 
-  constructor() { }
+  form: FormGroup;
 
-  ngOnInit() {
+  constructor() {
   }
 
-  onSubmit(mediaItem){
+  ngOnInit() {
+    this.form = new FormGroup({
+      medium: new FormControl('Movies'),
+      name: new FormControl(''),
+      category: new FormControl(''),
+      year: new  FormControl('')
+    });
+  }
+
+  onSubmit(mediaItem) {
     console.log(mediaItem);
   }
 
