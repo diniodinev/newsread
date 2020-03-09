@@ -18,7 +18,8 @@ export class MediaItemFormComponent implements OnInit {
       medium: new FormControl('Movies'),
       name: new FormControl(''),
       category: new FormControl(''),
-      year: new  FormControl('')
+      year: new  FormControl(''),
+      area: new FormControl('')
     });
   }
 

@@ -29,6 +29,24 @@
       <label for="year">Year</label>
       <input type="text" name="year" id="year" maxlength="4" formControlName="year">
     </li>
+    <li>
+      <label for="description">Description</label>
+      <input type="text" name="description" id="description" formControlName="description">
+    </li>
+    <li>
+      <div class="md-form">
+        <label for="form7">Auto resizing textarea</label>
+        <textarea type="text" id="form7" class="md-textarea md-textarea-auto form-control" mdbInput
+                  formControlName="area"></textarea>
+      </div>
+    </li>
+    <li>
+      <mat-slide-toggle [checked]="true"></mat-slide-toggle>
+    </li>
+    <li>
+      <mat-autocomplete></mat-autocomplete>
+    </li>
+
   </ul>
-  <button type="submit">Save</button>
+  <button type="submit" [disabled]="!form.valid">Save</button>
 </form>
