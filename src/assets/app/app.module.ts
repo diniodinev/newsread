@@ -12,18 +12,14 @@ import {Routes} from "@angular/router";
 import {RouterModule} from "@angular/router";
 import {MaterialModule} from "../../app/shared/material.module";
 
-const routes: Routes = [
-  {
-    path: 'demo', loadChildren: '../../app/demo/demo.module#DemoModule'
-  },
-  {
-    path: '**', redirectTo: 'demo'
-  }
+const routes: Routes = [// {path: 'contactmanager', loadChildren: () => import('../../app/contactmanager/contactmanager.module').then(m => m.ContactmanagerModule)},
+ // {path: 'demo', loadChildren: () => import('../../app/demo/demo.module').then(m => m.DemoModule)},
+//  {path: '**', redirectTo: 'contactmanager'}
 ]
 
 @NgModule({
-  imports: [BrowserModule, ReactiveFormsModule, BrowserAnimationsModule, FormsModule, MaterialModule,
-    RouterModule.forRoot(routes)],
+  imports: [BrowserModule, ReactiveFormsModule, BrowserAnimationsModule, FormsModule, MaterialModule],
+  //  RouterModule.forRoot(routes)
   declarations: [AppComponent, MediaItemComponent, MediaItemListComponent, FavouriteDirective, CategoryListPipe, MediaItemFormComponent],
   bootstrap: [AppComponent]
 })

@@ -28,6 +28,9 @@
     <li>
       <label for="year">Year</label>
       <input type="text" name="year" id="year" maxlength="4" formControlName="year">
+      <div *ngIf="form.get('year').errors as yearErrors" class="error">
+        The input year is not valid must be between {{yearErrors.year.min}} and {{yearErrors.year.max}}
+      </div>
     </li>
     <li>
       <label for="description">Description</label>

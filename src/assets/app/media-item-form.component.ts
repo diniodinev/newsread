@@ -18,7 +18,7 @@ export class MediaItemFormComponent implements OnInit {
       medium: new FormControl('Movies'),
       name: new FormControl('', Validators.compose([Validators.required, Validators.pattern('[\\w\\-\\s\\/]+')])),
       category: new FormControl(''),
-      year: new FormControl('',this.yearValidator),
+      year: new FormControl('', this.yearValidator),
       description: new FormControl(''),
       area: new FormControl('')
     });
@@ -28,17 +28,23 @@ export class MediaItemFormComponent implements OnInit {
     console.log(mediaItem);
   }
 
-  yearValidator(control : FormControl){
+  yearValidator(control: FormControl) {
     if (control.value.trim().length === 0) {
       return null;
     }
     const year = parseInt(control.value, 10);
-    const minYear = 1900;
-    const maxYear = 2100;
+    const minYear = 1800;
+    const maxYear = 2200;
     if (year >= minYear && year <= maxYear) {
       return null;
     } else {
-      return { year: true };
+      return {
+        year: {
+          min: minYear,
+          max: maxYear
+        }
+      }
+        ;
     }
   }
 
